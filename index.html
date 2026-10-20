@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcellino Rafael — Portofolio</title>
+<meta name="description" content="Portofolio Marcellino Rafael: desain, video, dan fotografi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500&family=Manrope:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="mercedes-f1.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<div id="bar" aria-hidden="true"></div>
+<div class="wrap">
+
+  <header class="top">
+    <a class="logo" href="#">Marcellino Rafael</a>
+    <nav><a href="#karya">Collection</a><a href="#tentang">About Me</a><a href="#kontak">Contact</a></nav>
+  </header>
+
+  <!-- ===== HERO: ganti kalimat di bawah sesuai keinginanmu ===== -->
+  <main>
+  <div class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <!-- Foto profil: file "Pp Atas.png" di folder yang sama dengan index.html (juga dipakai di bagian Tentang) -->
+    <div class="avatar"><img src="Pp Atas.png" alt="Foto profil Marcellino Rafael" onerror="this.remove()"></div>
+    <h1>Rafael</h1>
+    <div>
+      <p>Improving everyday.</p>
+      <a class="btn" href="#kontak">Contact Me</a>
+    </div>
+  </div>
+
+  <!-- ===== KARYA ===== -->
+  <h2 id="karya">Collection</h2>
+  <div class="filters" role="group" aria-label="Filter karya">
+    <button data-f="all" aria-pressed="true">All</button>
+    <button data-f="desain" aria-pressed="false">Design</button>
+    <button data-f="video" aria-pressed="false">Video</button>
+    <button data-f="foto" aria-pressed="false">Photos</button>
+  </div>
+
+  <!--
+    CARA MENAMBAH KARYA:
+    1. Taruh file gambar di folder "images" (sebelah file index.html ini).
+    2. Salin satu blok <figure> di bawah, lalu ganti:
+       - data-cat  : desain / foto / video
+       - src       : images/nama-file-kamu.jpg
+       - figcaption: judul karya
+       - --r       : rasio bentuk (4/5 = potret, 1/1 = kotak, 3/2 = lanskap)
+    3. Untuk VIDEO: upload ke YouTube, lalu isi data-video dengan kode di link-nya
+       (contoh: youtube.com/watch?v=ABC123xyz  ->  data-video="ABC123xyz")
+       Gambar sampul diambil otomatis dari YouTube. Tidak perlu isi src.
+  -->
+  <div class="gallery" id="gallery">
+
+    <figure class="work" data-cat="foto" style="--r:4/5" tabindex="0">
+      <img src="Foto1.JPG" alt="Foto 1" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="foto" style="--r:1/1" tabindex="0">
+      <img src="Foto2.JPG" alt="Foto 2" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="desain" style="--r:3/4" tabindex="0">
+      <img src="Desain1.png" alt="Desain 1" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="video" data-video="https://youtube.com/shorts/th3pGLiM-D8?si=y5xBZLKmh0x1Bb-I" style="--r:16/9" tabindex="0">
+      <img alt="Video 1" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="foto" style="--r:3/4" tabindex="0">
+      <img src="Foto3.JPG" alt="Foto 3" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="foto" style="--r:4/5" tabindex="0">
+      <img src="Foto6.jpg" alt="Foto 4" loading="lazy">
+    </figure>
+    
+    <figure class="work" data-cat="foto" style="--r:4/5" tabindex="0">
+      <img src="Foto7.jpg" alt="Foto 4" loading="lazy">
+    </figure>
+
+    <figure class="work" data-cat="foto" style="--r:4/5" tabindex="0">
+      <img src="Foto8.jpg" alt="Foto 4" loading="lazy">
+    </figure>
+    
+
+    <figure class="work" data-cat="desain" style="--r:1/1" tabindex="0">
+      <img src="Desain2.png" alt="Desain 2" loading="lazy">
+    </figure>
+
+  </div>
+
+  <!-- ===== TENTANG ===== -->
+  <section id="tentang" class="about">
+    <div class="photo"><img src="Foto About Me.jpg" alt="Foto Marcellino Rafael" onerror="this.remove()"></div>
+    <div>
+      <h2>About Me</h2>
+      <p>I am a dedicated Computer Engineering professional and IT Enthusiast with a strong passion for technology, hardware, and digital innovation. Alongside my technical background, I thrive in the creative space as a photographer, graphic designer, and video editor. This unique blend of analytical engineering skills and visual creativity allows me to build digital solutions that are not only highly functional but also visually compelling.</p>
+    </div>
+  </section>
+
+  <!-- ===== KONTAK: ganti link dengan milikmu ===== -->
+  <section id="kontak" class="contact">
+    <h2>Contact</h2>
+    <p style="color:var(--muted);margin-top:.5rem">Hit me below</p>
+    <ul>
+      <li><a href="https://instagram.com/ellnotstrong_">@ellnotstrong_</a></li>
+      <li><a href="mailto:marcelinorafael0784@gmail.com">marcelinorafael0784@gmail.com</a></li>
+      <li><a href="https://wa.me/6283838682884">WhatsApp</a></li>
+    </ul>
+  </section>
+  </main>
+
+  <footer>© <span id="yr"></span> Marcellino Rafael. All Rights Reserved.</footer>
+</div>
+
+<!-- ===== PEMUTAR MUSIK LATAR =====
+  1. Taruh file lagu (format .mp3) di folder yang sama dengan index.html.
+  2. Ganti src="music.mp3" di <audio> dengan nama file lagumu (huruf besar/kecil harus sama persis).
+  3. Ganti tulisan di <span class="track"> dengan judul lagumu. -->
+<div class="player" id="player">
+  <button class="pp" id="pp" aria-label="Putar musik">
+    <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </button>
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="track">Black Beatles - Rae Sremmurd</span>
+  <input id="vol" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Volume">
+</div>
+<audio id="bgm" src="Black Beatles.mp3" loop preload="auto"></audio>
+
+<dialog id="lb" aria-label="Tampilan karya">
+  <div class="box"><button class="close" aria-label="Tutup">Tutup</button><div id="lbc"></div></div>
+</dialog>
+
+<!-- ===== LAYAR SAMBUTAN: klik "Enter" membuat musik langsung diputar.
+     Hapus blok ini (dan class="locked" di <body>) jika tidak ingin layar sambutan. -->
+<div class="splash" id="splash" role="dialog" aria-label="Selamat datang">
+  <!-- Garis kecepatan + mobil F1 (file mercedes-f1.webp, tampak dari atas, moncong menghadap atas) -->
+  <div class="speed" aria-hidden="true">
+    <i style="left:10%;--d:0"></i><i style="left:24%;--d:2"></i><i style="left:37%;--d:1"></i><i style="left:63%;--d:3"></i><i style="left:76%;--d:1"></i><i style="left:90%;--d:2"></i>
+  </div>
+  <img class="f1" src="mercedes-f1.webp" alt="" decoding="async">
+  <p class="splash-name">Marcellino Rafael</p>
+  <button class="splash-btn" id="enter">Enter</button>
+  <p class="splash-hint">Best experienced with sound on</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
